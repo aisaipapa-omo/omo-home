@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -5,18 +6,29 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>お問い合わせ管理 | OMOん家</title>
 
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="admin-contacts.css">
+
+    <link
+        rel="stylesheet"
+        href="admin-contacts.css"
+    >
 
 </head>
 
+
 <body>
 
-    <!-- ヘッダー -->
+
+    <!-- =========================
+         ヘッダー
+    ========================= -->
 
     <header class="site-header">
 
@@ -31,6 +43,7 @@
             </span>
 
         </div>
+
 
         <nav>
 
@@ -51,13 +64,21 @@
     </header>
 
 
-    <!-- 管理画面 -->
+
+    <!-- =========================
+         管理画面
+    ========================= -->
 
     <main class="admin-contact-page">
 
+
+        <!-- タイトル -->
+
         <section class="admin-title">
 
-            <p>ADMIN</p>
+            <p>
+                ADMIN
+            </p>
 
             <h1 class="no-tape">
                 お問い合わせ一覧
@@ -66,6 +87,9 @@
         </section>
 
 
+
+        <!-- 管理者状態 -->
+
         <p
             id="admin-status"
             class="admin-status"
@@ -73,6 +97,112 @@
             確認しています...
         </p>
 
+
+
+        <!-- =========================
+             件数・絞り込み
+        ========================= -->
+
+        <div class="contact-counts">
+
+
+            <button
+                type="button"
+                class="filter-button active"
+                data-filter="all"
+            >
+
+                すべて
+
+                <span id="count-all">
+                    0
+                </span>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="filter-button"
+                data-filter="unresolved"
+            >
+
+                未対応
+
+                <span id="count-unresolved">
+                    0
+                </span>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="filter-button"
+                data-filter="resolved"
+            >
+
+                対応済み
+
+                <span id="count-resolved">
+                    0
+                </span>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="filter-button"
+                data-filter="archived"
+            >
+
+                アーカイブ
+
+                <span id="count-archived">
+                    0
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             検索
+        ========================= -->
+
+        <div class="contact-search">
+
+
+            <input
+                type="search"
+                id="contact-search-input"
+                placeholder="名前・メール・お問い合わせ内容を検索"
+                autocomplete="off"
+            >
+
+
+            <button
+                type="button"
+                id="contact-search-clear"
+            >
+                クリア
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             お問い合わせ一覧
+        ========================= -->
 
         <section
             id="contact-list"
@@ -85,58 +215,221 @@
 
         </section>
 
+
     </main>
 
 
-    <!-- フッター -->
+
+    <!-- =========================
+         お問い合わせ詳細モーダル
+    ========================= -->
+
+    <div
+        id="contact-modal"
+        class="contact-modal"
+    >
+
+
+        <div class="contact-modal-inner">
+
+
+            <!-- 閉じる -->
+
+            <button
+                type="button"
+                id="contact-modal-close"
+                class="contact-modal-close"
+            >
+                ×
+            </button>
+
+
+
+            <!-- タイトル -->
+
+            <p class="contact-modal-label">
+                CONTACT
+            </p>
+
+
+
+            <!-- 名前 -->
+
+            <h2 id="modal-name">
+                お名前
+            </h2>
+
+
+
+            <!-- メール -->
+
+            <p
+                id="modal-email"
+                class="modal-email"
+            >
+            </p>
+
+
+
+            <!-- 日付 -->
+
+            <p
+                id="modal-date"
+                class="modal-date"
+            >
+            </p>
+
+
+
+            <!-- =========================
+                 問い合わせ内容
+            ========================= -->
+
+            <div class="modal-message">
+
+                <p
+                    id="modal-message"
+                >
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 管理者メモ
+            ========================= -->
+
+            <div class="admin-note-area">
+
+
+                <p class="admin-note-label">
+                    ADMIN MEMO
+                </p>
+
+
+                <textarea
+                    id="modal-admin-note"
+                    placeholder="この問い合わせについてのメモを入力..."
+                ></textarea>
+
+
+                <button
+                    type="button"
+                    id="save-admin-note"
+                    class="save-note-button"
+                >
+                    メモを保存
+                </button>
+
+
+                <p
+                    id="admin-note-result"
+                    class="admin-note-result"
+                >
+                </p>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 詳細画面の操作ボタン
+            ========================= -->
+
+            <div
+                id="modal-actions"
+                class="modal-actions"
+            >
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         フッター
+    ========================= -->
 
     <footer>
 
+
         <div class="footer-inner">
+
 
             <div class="footer-logo">
                 OMOん家
             </div>
 
+
             <div class="footer-subtitle">
                 JOURNAL / MEMORY / LIFE
             </div>
 
+
             <div class="footer-links">
+
 
                 <a href="/index.html">
                     ホーム
                 </a>
 
-                <span>|</span>
+
+                <span>
+                    |
+                </span>
+
 
                 <a href="/home-blog/blog.html">
                     ブログ
                 </a>
 
-                <span>|</span>
+
+                <span>
+                    |
+                </span>
+
 
                 <a href="/home-contact/contact.html">
                     お問い合わせ
                 </a>
 
+
             </div>
+
 
             <p class="copyright">
                 since 2026 OMOん家
             </p>
 
+
         </div>
+
 
     </footer>
 
 
-    <!-- Supabase -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- =========================
+         Supabase
+    ========================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+
+    <!-- 管理画面JavaScript -->
 
     <script src="admin-contacts.js"></script>
+
 
 </body>
 
 </html>
+```

@@ -287,3 +287,339 @@
     }
 
 }
+/* =========================
+   対応状態
+========================= */
+
+.contact-card-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid #e2d8cd;
+
+}
+
+
+.unresolved-label {
+
+    font-size: 12px;
+
+    color: #a17f72;
+
+}
+
+
+.resolved-label {
+
+    font-size: 12px;
+
+    color: #71856f;
+
+}
+
+
+.resolve-button {
+
+    padding:
+        7px 12px;
+
+    border:
+        1px solid #cbbbad;
+
+    background:
+        #fffaf4;
+
+    color:
+        #665b51;
+
+    cursor: pointer;
+
+    font-size:
+        11px;
+
+}
+
+
+.resolve-button:hover {
+
+    background:
+        #eee5db;
+
+}
+
+/* =========================
+   お問い合わせ詳細モーダル
+========================= */
+
+.contact-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(50, 40, 32, 0.45);
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.contact-modal.show {
+
+    display: flex;
+
+}
+
+
+.contact-modal-inner {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    padding: 45px;
+
+    background:
+        #fffaf4;
+
+    border:
+        1px solid #d8c8b8;
+
+    box-shadow:
+        0 20px 50px
+        rgba(50, 40, 32, 0.25);
+
+}
+
+
+.contact-modal-label {
+
+    margin: 0 0 10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color:
+        #a18f7e;
+
+}
+
+
+.contact-modal-inner h2 {
+
+    margin: 0 0 15px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    color:
+        #40362f;
+
+}
+
+
+.modal-email {
+
+    margin: 0 0 5px;
+
+    font-size: 13px;
+
+    color:
+        #665b51;
+
+}
+
+
+.modal-email a {
+
+    color:
+        #665b51;
+
+}
+
+
+.modal-date {
+
+    margin: 0 0 25px;
+
+    font-size: 11px;
+
+    color:
+        #9c8c7d;
+
+}
+
+
+.modal-message {
+
+    padding: 25px;
+
+    background:
+        #f5eee3;
+
+    border:
+        1px solid #e2d8cd;
+
+    line-height: 1.8;
+
+    color:
+        #40362f;
+
+}
+
+
+.modal-message p {
+
+    margin: 0;
+
+    white-space: pre-wrap;
+
+}
+
+
+.contact-modal-close {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        #665b51;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+}
+
+
+.contact-modal-close:hover {
+
+    color:
+        #c58c88;
+
+}
+
+
+.modal-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+/* =========================
+   カードをクリックできる表示に
+========================= */
+
+.contact-card {
+
+    cursor: pointer;
+
+}
+
+
+.contact-card .reply-button,
+.contact-card .resolve-button,
+.contact-card .archive-button {
+
+    position: relative;
+
+    z-index: 5;
+
+    cursor: pointer;
+
+}
+
+
+@media (max-width: 650px) {
+
+    .contact-modal {
+
+        padding: 15px;
+
+    }
+
+
+    .contact-modal-inner {
+
+        padding: 35px 20px;
+
+        max-height: 90vh;
+
+    }
+
+
+    .contact-modal-inner h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .modal-message {
+
+        padding: 18px;
+
+    }
+
+}
+
