@@ -1,0 +1,394 @@
+@charset "utf-8";
+
+
+/* =========================
+   CONTACTページ
+========================= */
+
+.contact-page {
+
+    min-height: 900px;
+
+    padding:
+        90px 20px 140px;
+
+    box-sizing: border-box;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,0.6) 0 1px,
+            transparent 1px
+        ),
+
+        #f5f0e8;
+
+    background-size:
+        5px 5px;
+
+}
+
+
+/* =========================
+   タイトル
+========================= */
+
+.contact-title {
+
+    max-width:
+        700px;
+
+    margin:
+        0 auto 50px;
+
+    text-align:
+        center;
+
+}
+
+
+.contact-small-title {
+
+    margin:
+        0 0 15px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        5px;
+
+    color:
+        #a17f72;
+
+}
+
+
+.contact-title h1 {
+
+    margin:
+        0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        48px;
+
+    font-weight:
+        normal;
+
+    letter-spacing:
+        4px;
+
+    color:
+        #292727;
+
+}
+
+
+.contact-description {
+
+    margin:
+        20px 0 0;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+
+    color:
+        #756b63;
+
+}
+
+
+/* =========================
+   フォーム
+========================= */
+
+.contact-form-area {
+
+    max-width:
+        650px;
+
+    margin:
+        0 auto;
+
+    padding:
+        40px;
+
+    box-sizing:
+        border-box;
+
+    background:
+        rgba(
+            255,
+            252,
+            246,
+            0.92
+        );
+
+    border:
+        1px solid
+        rgba(
+            160,
+            140,
+            120,
+            0.35
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            70,
+            55,
+            40,
+            0.10
+        );
+
+}
+
+
+/* =========================
+   入力欄
+========================= */
+
+.form-group {
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.form-group label {
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        1px;
+
+    color:
+        #4c4038;
+
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width:
+        100%;
+
+    box-sizing:
+        border-box;
+
+    padding:
+        13px 14px;
+
+    border:
+        1px solid
+        #d5c8ba;
+
+    border-radius:
+        2px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    font-family:
+        inherit;
+
+    font-size:
+        13px;
+
+    color:
+        #40362f;
+
+    outline:
+        none;
+
+}
+
+
+.form-group textarea {
+
+    resize:
+        vertical;
+
+    min-height:
+        170px;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color:
+        #b88f87;
+
+    background:
+        #fffdfa;
+
+}
+
+
+/* =========================
+   送信ボタン
+========================= */
+
+.contact-submit {
+
+    display:
+        block;
+
+    width:
+        180px;
+
+    margin:
+        10px auto 0;
+
+    padding:
+        13px 20px;
+
+    border:
+        none;
+
+    border-radius:
+        2px;
+
+    background:
+        #292727;
+
+    color:
+        #f5f0e8;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        2px;
+
+    cursor:
+        pointer;
+
+    transition:
+        opacity 0.3s ease;
+
+}
+
+
+.contact-submit:hover {
+
+    opacity:
+        0.75;
+
+}
+
+
+/* =========================
+   結果メッセージ
+========================= */
+
+.contact-result {
+
+    margin:
+        20px 0 0;
+
+    text-align:
+        center;
+
+    font-size:
+        12px;
+
+    color:
+        #8a6c63;
+
+}
+
+
+/* =========================
+   スマホ
+========================= */
+
+@media (max-width: 650px) {
+
+    .contact-page {
+
+        min-height:
+            800px;
+
+        padding:
+            60px 15px 100px;
+
+    }
+
+
+    .contact-title h1 {
+
+        font-size:
+            34px;
+
+        letter-spacing:
+            2px;
+
+    }
+
+
+    .contact-description {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .contact-form-area {
+
+        padding:
+            25px 20px;
+
+    }
+
+
+    .contact-submit {
+
+        width:
+            160px;
+
+    }
+
+}
