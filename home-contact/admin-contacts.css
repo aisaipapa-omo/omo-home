@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+/* =========================
+   管理画面
+========================= */
+
+.admin-contact-page {
+
+    min-height: 900px;
+
+    padding: 90px 20px 140px;
+
+    box-sizing: border-box;
+
+    background: #f5f0e8;
+
+}
+
+
+/* =========================
+   タイトル
+========================= */
+
+.admin-title {
+
+    max-width: 900px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+
+}
+
+
+.admin-title p {
+
+    margin: 0 0 10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #a17f72;
+
+}
+
+
+.admin-title h1 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    letter-spacing: 3px;
+
+    color: #40362f;
+
+}
+
+
+/* =========================
+   管理者状態
+========================= */
+
+.admin-status {
+
+    max-width: 900px;
+
+    margin: 0 auto 25px;
+
+    padding: 10px 15px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #75695f;
+
+}
+
+
+/* =========================
+   お問い合わせ一覧
+========================= */
+
+.contact-list {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================
+   お問い合わせカード
+========================= */
+
+.contact-card {
+
+    margin-bottom: 18px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(
+            255,
+            252,
+            246,
+            0.95
+        );
+
+    border:
+        1px solid
+        rgba(
+            190,
+            170,
+            145,
+            0.5
+        );
+
+    box-shadow:
+        0 5px 15px
+        rgba(
+            70,
+            55,
+            40,
+            0.08
+        );
+
+}
+
+
+/* =========================
+   日付
+========================= */
+
+.contact-card-date {
+
+    margin: 0 0 12px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    color: #a17f72;
+
+}
+
+
+/* =========================
+   名前
+========================= */
+
+.contact-card-name {
+
+    margin: 0 0 7px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    color: #40362f;
+
+}
+
+
+/* =========================
+   メール
+========================= */
+
+.contact-card-email {
+
+    margin: 0 0 18px;
+
+    font-size: 12px;
+
+    color: #887b70;
+
+}
+
+
+.contact-card-email a {
+
+    color: #887b70;
+
+    text-decoration: none;
+
+}
+
+
+/* =========================
+   内容
+========================= */
+
+.contact-card-message {
+
+    margin: 0;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid
+        #e2d8cd;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #5d5148;
+
+    white-space: pre-wrap;
+
+}
+
+
+/* =========================
+   メッセージ
+========================= */
+
+.loading,
+.no-contacts,
+.error,
+.not-admin {
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    color: #887b70;
+
+}
+
+
+/* =========================
+   スマホ
+========================= */
+
+@media (max-width: 650px) {
+
+    .admin-contact-page {
+
+        padding:
+            60px 12px 100px;
+
+    }
+
+
+    .admin-title h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .contact-card {
+
+        padding: 18px;
+
+    }
+
+
+    .contact-card-name {
+
+        font-size: 17px;
+
+    }
+
+}
