@@ -1,0 +1,810 @@
+@charset"utf-8";
+
+/* ========================================
+   SNSページ全体
+======================================== */
+
+.sns-page {
+    max-width: 1000px;
+
+    margin: 70px auto;
+
+    padding: 0 30px;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   タイトル
+======================================== */
+
+.sns-page h1 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    letter-spacing: 6px;
+
+    color: #292727;
+}
+
+
+.sns-subtitle {
+    margin-top: 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #999;
+}
+
+
+
+/* ========================================
+   シャボン玉エリア
+======================================== */
+
+.bubble-area {
+
+    position: relative;
+
+    width: 850px;
+
+    max-width: 100%;
+
+    height: 620px;
+
+    margin: 50px auto;
+
+}
+
+
+
+/* ========================================
+   シャボン玉共通
+======================================== */
+
+.bubble {
+
+    position: absolute;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    color: #292727;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    cursor: pointer;
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    backdrop-filter: blur(3px);
+
+    -webkit-backdrop-filter: blur(3px);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+}
+
+
+/* ========================================
+   SNSアイコン
+======================================== */
+
+.bubble img {
+
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: contain;
+
+    margin-bottom: 9px;
+
+}
+
+
+/* ========================================
+   SNS文字
+======================================== */
+
+.bubble span {
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* ========================================
+   Instagram
+======================================== */
+
+.bubble-instagram {
+
+    width: 190px;
+    height: 190px;
+
+    left: 50px;
+    top: 90px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,0.95),
+            rgba(245,185,205,0.45),
+            rgba(220,150,185,0.12)
+        );
+
+    box-shadow:
+        inset 10px 10px 25px rgba(255,255,255,0.8),
+        inset -10px -10px 25px rgba(210,130,175,0.15),
+        0 10px 30px rgba(180,130,160,0.12);
+
+    animation: bubbleFloat1 5s ease-in-out infinite;
+
+}
+
+
+
+/* ========================================
+   X
+======================================== */
+
+.bubble-x {
+
+    width: 140px;
+    height: 140px;
+
+    right: 80px;
+    top: 45px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,0.95),
+            rgba(180,215,235,0.45),
+            rgba(130,190,220,0.12)
+        );
+
+    box-shadow:
+        inset 8px 8px 20px rgba(255,255,255,0.8),
+        inset -8px -8px 20px rgba(100,170,210,0.15),
+        0 10px 25px rgba(120,170,200,0.12);
+
+    animation: bubbleFloat2 6s ease-in-out infinite;
+
+}
+
+
+
+/* ========================================
+   YouTube
+======================================== */
+
+.bubble-youtube {
+
+    width: 155px;
+    height: 155px;
+
+    left: 350px;
+    top: 15px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,0.95),
+            rgba(245,195,195,0.45),
+            rgba(220,150,150,0.12)
+        );
+
+    box-shadow:
+        inset 8px 8px 20px rgba(255,255,255,0.8),
+        inset -8px -8px 20px rgba(210,140,140,0.15),
+        0 10px 25px rgba(180,140,140,0.12);
+
+    animation: bubbleFloat3 5.5s ease-in-out infinite;
+
+}
+
+
+
+/* ========================================
+   TikTok
+======================================== */
+
+.bubble-tiktok {
+
+    width: 200px;
+    height: 200px;
+
+    left: 325px;
+    top: 250px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,0.95),
+            rgba(190,225,215,0.45),
+            rgba(125,190,170,0.12)
+        );
+
+    box-shadow:
+        inset 10px 10px 25px rgba(255,255,255,0.8),
+        inset -10px -10px 25px rgba(100,180,150,0.15),
+        0 10px 30px rgba(100,160,140,0.12);
+
+    animation: bubbleFloat4 6s ease-in-out infinite;
+
+}
+
+
+
+/* ========================================
+   note
+======================================== */
+
+.bubble-note {
+
+    width: 135px;
+    height: 135px;
+
+    left: 70px;
+    bottom: 40px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,0.95),
+            rgba(225,205,180,0.45),
+            rgba(205,175,145,0.12)
+        );
+
+    box-shadow:
+        inset 8px 8px 20px rgba(255,255,255,0.8),
+        0 10px 25px rgba(170,140,110,0.12);
+
+    animation: bubbleFloat5 5.5s ease-in-out infinite;
+
+}
+
+
+
+/* ========================================
+   公式LINE
+======================================== */
+
+.bubble-line {
+
+    width: 160px;
+    height: 160px;
+
+    right: 60px;
+    bottom: 50px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,0.95),
+            rgba(200,220,235,0.45),
+            rgba(150,180,210,0.12)
+        );
+
+    box-shadow:
+        inset 8px 8px 20px rgba(255,255,255,0.8),
+        0 10px 25px rgba(130,160,190,0.12);
+
+    animation: bubbleFloat6 6s ease-in-out infinite;
+
+}
+
+
+
+/* ========================================
+   ホバー
+======================================== */
+
+.bubble:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        inset 10px 10px 25px rgba(255,255,255,0.9),
+        0 18px 40px rgba(120,100,140,0.18);
+
+}
+
+
+
+/* ========================================
+   TikTokアカウント
+======================================== */
+
+.tiktok-accounts {
+
+    position: absolute;
+
+    left: 275px;
+    top: 225px;
+
+    width: 300px;
+    height: 220px;
+
+    pointer-events: none;
+
+}
+
+
+
+/* ========================================
+   TikTok パパ・ママ
+======================================== */
+
+.tiktok-account {
+
+    position: absolute;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    color: #292727;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    opacity: 0;
+
+    transform: scale(0.2);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+    pointer-events: none;
+
+}
+
+
+.tiktok-account span {
+
+    font-size: 13px;
+
+}
+
+
+.tiktok-account small {
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+}
+
+
+
+/* パパ */
+
+.tiktok-papa {
+
+    left: -20px;
+    top: 20px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            white,
+            rgba(245,195,215,0.5),
+            transparent
+        );
+
+}
+
+
+
+/* ママ */
+
+.tiktok-mama {
+
+    right: -20px;
+    top: 70px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            white,
+            rgba(180,215,235,0.5),
+            transparent
+        );
+
+}
+
+
+
+/* 開いた状態 */
+
+.tiktok-accounts.open {
+
+    pointer-events: auto;
+
+}
+
+
+.tiktok-accounts.open .tiktok-account {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    pointer-events: auto;
+
+}
+
+
+
+/* ========================================
+   小さいシャボン玉
+======================================== */
+
+.mini {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.7);
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,0.95),
+            rgba(215,200,230,0.25),
+            transparent
+        );
+
+    box-shadow:
+        inset 3px 3px 8px rgba(255,255,255,0.75),
+        0 5px 15px rgba(150,130,160,0.08);
+
+    pointer-events: none;
+
+    animation: miniFloat 6s ease-in-out infinite;
+
+}
+
+
+
+/* ========================================
+   小さいシャボン玉の位置
+======================================== */
+
+.mini-1 {
+    width: 24px;
+    height: 24px;
+
+    left: 10px;
+    top: 70px;
+}
+
+.mini-2 {
+    width: 14px;
+    height: 14px;
+
+    left: 220px;
+    top: 20px;
+
+    animation-delay: 1s;
+}
+
+.mini-3 {
+    width: 32px;
+    height: 32px;
+
+    right: 10px;
+    top: 180px;
+
+    animation-delay: 2s;
+}
+
+.mini-4 {
+    width: 18px;
+    height: 18px;
+
+    right: 200px;
+    top: 240px;
+
+    animation-delay: 3s;
+}
+
+.mini-5 {
+    width: 28px;
+    height: 28px;
+
+    left: 15px;
+    bottom: 150px;
+
+    animation-delay: 1.5s;
+}
+
+.mini-6 {
+    width: 15px;
+    height: 15px;
+
+    right: 15px;
+    bottom: 150px;
+
+    animation-delay: 2.5s;
+}
+
+.mini-7 {
+    width: 21px;
+    height: 21px;
+
+    left: 250px;
+    bottom: 15px;
+
+    animation-delay: 3.5s;
+}
+
+.mini-8 {
+    width: 12px;
+    height: 12px;
+
+    right: 270px;
+    bottom: 20px;
+
+    animation-delay: 4s;
+}
+
+.mini-9 {
+    width: 18px;
+    height: 18px;
+
+    left: 170px;
+    top: 350px;
+
+    animation-delay: 2s;
+}
+
+.mini-10 {
+    width: 25px;
+    height: 25px;
+
+    right: 170px;
+    bottom: 250px;
+
+    animation-delay: 1s;
+}
+
+
+
+/* ========================================
+   大きなシャボン玉の動き
+======================================== */
+
+@keyframes bubbleFloat1 {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(12px, -16px);
+    }
+
+}
+
+
+@keyframes bubbleFloat2 {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-12px, 14px);
+    }
+
+}
+
+
+@keyframes bubbleFloat3 {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, -12px);
+    }
+
+}
+
+
+@keyframes bubbleFloat4 {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-14px, 15px);
+    }
+
+}
+
+
+@keyframes bubbleFloat5 {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, -12px);
+    }
+
+}
+
+
+@keyframes bubbleFloat6 {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-10px, -12px);
+    }
+
+}
+
+
+
+/* ========================================
+   小さいシャボン玉の動き
+======================================== */
+
+@keyframes miniFloat {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(10px, -12px);
+    }
+
+    50% {
+        transform: translate(-8px, -25px);
+    }
+
+    75% {
+        transform: translate(12px, -10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
+
+
+/* ========================================
+   スマホ対応
+======================================== */
+
+@media (max-width: 700px) {
+
+    .sns-page {
+
+        padding: 0 15px;
+
+    }
+
+
+    .bubble-area {
+
+        height: 750px;
+
+    }
+
+
+    .bubble-instagram {
+
+        left: 5%;
+
+    }
+
+
+    .bubble-x {
+
+        right: 5%;
+
+    }
+
+
+    .bubble-youtube {
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+    }
+
+
+    .bubble-tiktok {
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        top: 260px;
+
+    }
+
+
+    .bubble-note {
+
+        left: 5%;
+
+        bottom: 40px;
+
+    }
+
+
+    .bubble-line {
+
+        right: 5%;
+
+        bottom: 40px;
+
+    }
+
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OMOん家</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo">
+            <img src="header/logo-icon.jpg" alt="OMOん家のロゴ">
+            <span class="site-name">OMOん家</span>
+            <span class="site-subtitle">ホームページ</span>
+        </div>
+
+        <nav>
+            <a href="index.html">ホーム</a>
+            <a href="blog.html">ブログ</a>
+            <a href="contact.html">お問い合わせ</a>
+        </nav>
+    </header>
+
+<!-- スライドショー -->
+<div class="slideshow">
+
+    <div class="slide active">
+        <img src="slide1.jpg" alt="写真1">
+    </div>
+
+    <div class="slide">
+        <img src="slide2.jpg" alt="写真2">
+    </div>
+
+    <div class="slide">
+        <img src="slide3.jpg" alt="写真3">
+    </div>
+
+    <!-- ドット -->
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</div>
+
+<script>
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+let current = 0;
+
+function showSlide(index) {
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+
+}
+
+setInterval(() => {
+
+    current++;
+
+    if (current >= slides.length) {
+        current = 0;
+    }
+
+    showSlide(current);
+
+}, 4000);
+
+</script>
+
+   
+   
+    <!-- メイン -->
+    <main>      
+
+        <h1>OMOん家のコンテンツ</h1>
+
+        
+        <!-- チェキ -->
+        <div class="cheki-area">
+
+        <!-- チェキ① SNS -->
+        <a href="sns.html" class="cheki cheki1">
+        <div class="photo">
+            SNS
+        </div>
+
+        <p>LINK</p>
+        <span>SNSアカウント</span>
+    </a>
+
+
+    <!-- チェキ② ブログ・アルバム -->
+    <a href="blog.html" class="cheki cheki2">
+        <div class="photo">
+            BLOG
+        </div>
+
+        <p>MEMORY</p>
+        <span>ブログ・アルバム</span>
+    </a>
+
+
+    <!-- チェキ③ Coming Soon -->
+    <div class="cheki cheki3 coming-soon">
+        <div class="photo">
+              COMING SOON...
+        </div>
+
+        <p>COMING SOON...</p>
+        <span>Coming Soon</span>
+    </div>
+</div>
+
+<!-- 自己紹介エリア -->
+<div class="profile-area">
+
+    <!-- 左側の写真 -->
+    <img src="profile/photo1.jpg" class="profile-photo photo-left1">
+    <img src="profile/photo2.jpg" class="profile-photo photo-left2">
+    <img src="profile/photo3.jpg" class="profile-photo photo-left3">
+    <img src="profile/photo4.jpg" class="profile-photo photo-left4">
+
+    <!-- 自己紹介BOX -->
+    <div class="profile">
+
+        <h2>自己紹介</h2>
+
+        <p>
+            はじめまして。<br>
+            OMOん家へようこそ。
+        </p>
+
+        <p>
+            NAME：OMO<br>
+            FROM：JAPAN
+        </p>
+
+    </div>
+
+    <!-- 右側の写真 -->
+    <img src="profile/photo5.jpg" class="profile-photo photo-right1">
+    <img src="profile/photo6.jpg" class="profile-photo photo-right2">
+    <img src="profile/photo7.jpg" class="profile-photo photo-right3">
+    <img src="profile/photo8.jpg" class="profile-photo photo-right4">
+
+    </div>
+  </main>
+   <script>
+
+const profileArea = document.querySelector(".profile-area");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                profileArea.classList.add("show");
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+observer.observe(profileArea);
+
+</script>
+ <!-- =========================
+     フッター
+========================= -->
+
+<footer>
+
+    <!-- 上の細いライン -->
+    <div class="footer-line"></div>
+
+    <div class="footer-inner">
+
+        <!-- ロゴ -->
+        <div class="footer-logo">
+            OMOん家
+        </div>
+
+        <div class="footer-subtitle">
+            JOURNAL / MEMORY / LIFE
+        </div>
+
+
+        <!-- ナビゲーション -->
+        <div class="footer-links">
+
+            <a href="index.html">ホーム</a>
+            <a href="blog.html">ブログ</a>
+            <a href="contact.html">お問い合わせ</a>
+
+        </div>
+
+        <!-- コピーライト -->
+        <p class="copyright">
+            © 2026 OMOん家
+        </p>
+
+    </div>
+
+</footer>
+</body>
+
+</html>

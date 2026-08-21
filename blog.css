@@ -1,0 +1,442 @@
+@charset "utf-8";
+
+
+/* =========================
+   BLOGページ
+========================= */
+
+.blog-page {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 1400px;
+
+    box-sizing: border-box;
+
+    padding: 90px 20px 160px;
+
+    background-color: #f7eee2;
+
+}
+
+
+/* =========================
+   背景画像
+   画像だけを薄くする
+========================= */
+
+.blog-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("blog-bg.png");
+
+    background-size:
+        100% auto;
+
+    background-position:
+        center top;
+
+    background-repeat:
+        no-repeat;
+
+    opacity: 0.45;
+
+    z-index: 0;
+
+}
+
+
+/* =========================
+   BLOGタイトル
+========================= */
+
+.blog-title {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    margin:
+        0 auto 45px;
+
+}
+
+
+.blog-title h1 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 64px;
+
+    font-weight: normal;
+
+    letter-spacing: 12px;
+
+    color: #403329;
+
+}
+
+
+.blog-title p {
+
+    margin:
+        20px 0 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    color: #66584d;
+
+}
+
+
+/* =========================
+   記事一覧
+========================= */
+
+.blog-list {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin:
+        0 auto;
+
+}
+
+
+/* =========================
+   記事カード
+========================= */
+
+#blog-posts {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 8px;
+
+}
+
+
+.blog-card {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background:
+        rgba(
+            255,
+            252,
+            246,
+            0.94
+        );
+
+    border:
+        1px solid
+        rgba(
+            190,
+            170,
+            145,
+            0.5
+        );
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 12px
+        rgba(
+            70,
+            50,
+            35,
+            0.10
+        );
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* マウスを乗せたとき */
+
+.blog-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 10px 20px
+        rgba(
+            70,
+            50,
+            35,
+            0.16
+        );
+
+}
+
+
+/* =========================
+   記事画像
+========================= */
+
+.blog-image-wrap {
+
+    width: 100%;
+
+    height: 95px;
+
+    overflow: hidden;
+
+    background: #e8ddd0;
+
+}
+
+
+.blog-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================
+   記事内容
+========================= */
+
+.blog-card-content {
+
+    padding:
+        8px 9px 11px;
+
+}
+
+
+.blog-date {
+
+    margin:
+        0 0 5px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 8px;
+
+    color: #a97970;
+
+}
+
+
+.blog-card h2 {
+
+    margin:
+        0 0 5px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    font-weight: normal;
+
+    line-height: 1.4;
+
+    color: #493d34;
+
+}
+
+
+.blog-text {
+
+    margin: 0;
+
+    font-size: 8px;
+
+    line-height: 1.55;
+
+    color: #75695f;
+
+    display:
+        -webkit-box;
+
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient:
+        vertical;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================
+   読み込み・エラー
+========================= */
+
+.loading,
+.no-posts,
+.error {
+
+    grid-column:
+        1 / -1;
+
+    text-align:
+        center;
+
+    padding:
+        50px 20px;
+
+    color:
+        #887b70;
+
+}
+
+
+/* =========================
+   スマホ
+========================= */
+
+@media (max-width: 650px) {
+
+    .blog-page {
+
+        min-height:
+            1200px;
+
+        padding:
+            55px 10px 100px;
+
+    }
+
+
+    .blog-page::before {
+
+        background-size:
+            auto 100%;
+
+        background-position:
+            center top;
+
+    }
+
+
+    .blog-title {
+
+        margin-bottom:
+            30px;
+
+    }
+
+
+    .blog-title h1 {
+
+        font-size:
+            40px;
+
+        letter-spacing:
+            7px;
+
+    }
+
+
+    .blog-title p {
+
+        margin-top:
+            14px;
+
+        font-size:
+            10px;
+
+    }
+
+
+    #blog-posts {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            7px;
+
+    }
+
+
+    .blog-image-wrap {
+
+        height:
+            80px;
+
+    }
+
+
+    .blog-card-content {
+
+        padding:
+            7px;
+
+    }
+
+
+    .blog-card h2 {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .blog-text {
+
+        font-size:
+            7px;
+
+    }
+
+}

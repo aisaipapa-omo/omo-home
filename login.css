@@ -1,0 +1,204 @@
+@charset"utf-8";
+/* =========================
+   ログインページ
+========================= */
+
+.login-page {
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   ログインBOX
+========================= */
+
+.login-box {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 50px 45px;
+
+    box-sizing: border-box;
+
+    background-color: rgba(255, 253, 249, 0.88);
+
+    border: 1px solid #ddd3c7;
+
+    box-shadow:
+        0 15px 40px rgba(60, 50, 40, 0.12);
+}
+
+
+/* 小さい文字 */
+
+.login-small {
+    margin: 0 0 12px;
+
+    text-align: center;
+
+    color: #c97c86;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+/* タイトル */
+
+.login-box h1 {
+    margin: 0;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    letter-spacing: 8px;
+}
+
+
+/* 説明 */
+
+.login-description {
+    margin: 20px 0 40px;
+
+    text-align: center;
+
+    color: #77706a;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   入力欄
+========================= */
+
+.form-item {
+    margin-bottom: 25px;
+}
+
+.form-item label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #55504b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.form-item input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    border: 1px solid #d8cfc3;
+
+    background-color: #fff;
+
+    color: #292727;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.form-item input:focus {
+    border-color: #c97c86;
+}
+
+
+/* =========================
+   ログインボタン
+========================= */
+
+.login-box button {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 35px;
+
+    padding: 15px;
+
+    border: none;
+
+    background-color: #292727;
+
+    color: #f5f0e8;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #c97c86;
+}
+
+
+/* メッセージ */
+
+#login-message {
+    min-height: 25px;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #c97c86;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   スマホ
+========================= */
+
+@media (max-width: 600px) {
+
+    .login-box {
+        padding: 40px 25px;
+    }
+
+    .login-box h1 {
+        font-size: 32px;
+    }
+
+}

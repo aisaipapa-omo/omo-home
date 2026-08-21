@@ -1,0 +1,819 @@
+@charset"utf-8";
+/* =========================
+   全体
+========================= */
+
+body {
+    margin: 0;
+    background-color: #f5f0e8;
+    color: #292727;
+    font-family: Georgia, "Times New Roman", serif;
+
+    /* 紙っぽい雰囲気 */
+    background-image:
+        radial-gradient(
+            rgba(80, 60, 40, 0.04) 1px,
+            transparent 1px
+        );
+    background-size: 5px 5px;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+header {
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    background-color: #292727;
+}
+
+
+/* OMOん家 */
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+}
+.logo img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+}
+
+.site-name {
+    color: #f5f0e8;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.site-subtitle {
+    color: #d8c8b0;
+    font-size: 16px;
+}
+
+
+/* =========================
+   リンク
+========================= */
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #f5f0e8;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c97c86;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+main {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 0 30px;
+}
+/* =========================
+   OMOん家のコンテンツ
+========================= */
+main h1 {
+    position: relative;
+
+    width: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 80px;
+    margin-bottom: 55px;
+
+    padding: 14px 35px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: normal;
+    letter-spacing: 4px;
+
+    color: #292727;
+    background-color: #f7f3ec;
+
+    text-align: center;
+
+    z-index: 1;
+}
+
+
+/* マスキングテープ */
+main h1::before {
+    content: "";
+
+    position: absolute;
+
+    top: -13px;
+    left: 50%;
+
+    width: 160px;
+    height: 30px;
+
+    background-color: #292727;
+
+    transform: translateX(-50%) rotate(-3deg);
+
+    z-index: -1;
+}
+
+/* =========================
+   スライドショー
+========================= */
+
+.slideshow {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+
+    margin: 60px auto;
+
+    overflow: hidden;
+
+    background-color: #ded6ca;
+}
+
+
+/* =========================
+   スライド
+========================= */
+
+.slide {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    transition: opacity 1.2s ease;
+}
+
+
+/* 表示中 */
+
+.slide.active {
+    opacity: 1;
+}
+
+
+/* =========================
+   写真
+========================= */
+
+.slide img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   ドット
+========================= */
+
+.dots {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 18px;
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+
+.dot {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin: 0 5px;
+
+    border-radius: 50%;
+
+    background-color: #b8afa5;
+
+    transition: 0.3s;
+}
+
+
+.dot.active {
+    background-color: #292727;
+}
+
+
+/* =========================
+   チェキ
+========================= */
+
+.cheki-area {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 50px;
+
+    margin-top: 80px;
+}
+
+
+/* チェキ */
+
+.cheki {
+    width: 220px;
+
+    padding: 15px 15px 25px;
+
+    background-color: #fffdf9;
+
+    color: #292727;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 20px rgba(60, 50, 40, 0.15);
+
+    transition: 0.3s;
+
+    position: relative;
+}
+
+
+/* 写真 */
+
+.photo {
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ddd5ca;
+
+    color: #8c8175;
+}
+
+
+/* =========================
+   チェキのマスキングテープ
+========================= */
+
+.cheki::before {
+    content: "";
+
+    position: absolute;
+
+    top: -12px;
+    left: 50%;
+
+    width: 90px;
+    height: 27px;
+
+    transform: translateX(-50%) rotate(-3deg);
+
+    background-color: rgba(216, 160, 168, 0.75);
+
+    z-index: 5;
+}
+
+
+/* それぞれ少し色を変える */
+
+.cheki2::before {
+    background-color: rgba(216, 200, 176, 0.8);
+
+    transform:
+        translateX(-50%)
+        rotate(2deg);
+}
+
+.cheki3::before {
+    background-color: rgba(168, 181, 162, 0.75);
+
+    transform:
+        translateX(-50%)
+        rotate(-4deg);
+}
+
+
+/* =========================
+   チェキの文字
+========================= */
+
+.cheki p {
+    margin: 15px 0 5px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #999;
+}
+
+.cheki span {
+    font-size: 18px;
+}
+
+
+/* =========================
+   チェキを少し傾ける
+========================= */
+
+.cheki1 {
+    transform: rotate(-4deg);
+}
+
+.cheki2 {
+    transform: rotate(2deg);
+}
+
+.cheki3 {
+    transform: rotate(-3deg);
+}
+
+
+/* マウスを乗せたとき */
+
+.cheki:hover {
+    transform:
+        translateY(-10px)
+        rotate(0deg);
+
+    box-shadow:
+        0 15px 30px rgba(60, 50, 40, 0.2);
+}
+/* =========================
+   チェキの下の自己紹介
+========================= */
+
+.profile {
+    position: relative;
+
+    width: 500px;
+    max-width: 80%;
+
+    margin: 60px auto 80px;
+    padding: 50px 50px 40px;
+
+    background-color: #fffaf0;
+
+    box-shadow:
+        0 8px 20px rgba(60, 50, 40, 0.15);
+
+    transform: rotate(-1.5deg);
+}
+/* =========================
+   自己紹介エリア
+========================= */
+
+.profile-area {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    height: 550px;
+
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   自己紹介BOX
+========================= */
+
+.profile {
+    position: relative;
+
+    width: 400px;
+    padding: 50px 40px 40px;
+
+    background-color: #fffaf0;
+
+    box-shadow:
+        0 8px 20px rgba(60, 50, 40, 0.15);
+
+    transform: rotate(-1deg);
+
+    z-index: 3;
+}
+
+
+/* =========================
+   写真共通
+========================= */
+
+.profile-photo {
+    position: absolute;
+
+    object-fit: cover;
+
+    padding: 7px;
+
+    background-color: #fffdf9;
+
+    box-shadow:
+        0 6px 15px rgba(60, 50, 40, 0.18);
+
+    z-index: 2;
+}
+
+
+/* =========================
+   左側
+========================= */
+
+.photo-left1 {
+    left: 2%;
+    top: 80px;
+
+    width: 100px;
+    height: 125px;
+
+    transform: rotate(-7deg);
+}
+
+.photo-left2 {
+    left: 12%;
+    top: 65px;
+
+    width: 90px;
+    height: 110px;
+
+    transform: rotate(5deg);
+}
+
+.photo-left3 {
+    left: 2%;
+    top: 280px;
+
+    width: 90px;
+    height: 115px;
+
+    transform: rotate(8deg);
+}
+
+.photo-left4 {
+    left: 12%;
+    top: 300px;
+
+    width: 105px;
+    height: 100px;
+
+    transform: rotate(-6deg);
+}
+
+
+/* =========================
+   右側
+========================= */
+
+.photo-right1 {
+    right: 12%;
+    top: 65px;
+
+    width: 90px;
+    height: 110px;
+
+    transform: rotate(-5deg);
+}
+
+.photo-right2 {
+    right: 2%;
+    top: 80px;
+
+    width: 100px;
+    height: 125px;
+
+    transform: rotate(7deg);
+}
+
+.photo-right3 {
+    right: 12%;
+    top: 300px;
+
+    width: 105px;
+    height: 100px;
+
+    transform: rotate(6deg);
+}
+
+.photo-right4 {
+    right: 2%;
+    top: 280px;
+
+    width: 90px;
+    height: 115px;
+
+    transform: rotate(-8deg);
+}
+/* =========================
+   写真のスクロールアニメーション
+========================= */
+
+.profile-photo {
+    opacity: 0;
+
+    transition:
+        transform 1s ease,
+        opacity 1s ease;
+
+    /* 最初は非表示 */
+}
+
+
+/* 左側の写真は左の外側から */
+.photo-left1 {
+    transform: translateX(-250px) rotate(-7deg);
+}
+
+.photo-left2 {
+    transform: translateX(-300px) rotate(5deg);
+}
+
+.photo-left3 {
+    transform: translateX(-250px) rotate(8deg);
+}
+
+.photo-left4 {
+    transform: translateX(-300px) rotate(-6deg);
+}
+
+
+/* 右側の写真は右の外側から */
+.photo-right1 {
+    transform: translateX(250px) rotate(-5deg);
+}
+
+.photo-right2 {
+    transform: translateX(300px) rotate(7deg);
+}
+
+.photo-right3 {
+    transform: translateX(250px) rotate(6deg);
+}
+
+.photo-right4 {
+    transform: translateX(300px) rotate(-8deg);
+}
+
+
+/* =========================
+   表示されたとき
+========================= */
+
+.profile-area.show .profile-photo {
+    opacity: 1;
+}
+
+
+/* 左側 → 元の位置 */
+
+.profile-area.show .photo-left1 {
+    transform: translateX(0) rotate(-7deg);
+}
+
+.profile-area.show .photo-left2 {
+    transform: translateX(0) rotate(5deg);
+}
+
+.profile-area.show .photo-left3 {
+    transform: translateX(0) rotate(8deg);
+}
+
+.profile-area.show .photo-left4 {
+    transform: translateX(0) rotate(-6deg);
+}
+
+
+/* 右側 → 元の位置 */
+
+.profile-area.show .photo-right1 {
+    transform: translateX(0) rotate(-5deg);
+}
+
+.profile-area.show .photo-right2 {
+    transform: translateX(0) rotate(7deg);
+}
+
+.profile-area.show .photo-right3 {
+    transform: translateX(0) rotate(6deg);
+}
+
+.profile-area.show .photo-right4 {
+    transform: translateX(0) rotate(-8deg);
+}
+
+.photo-left1,
+.photo-right1 {
+    transition-delay: 0.1s;
+}
+
+.photo-left2,
+.photo-right2 {
+    transition-delay: 0.2s;
+}
+
+.photo-left3,
+.photo-right3 {
+    transition-delay: 0.3s;
+}
+
+.photo-left4,
+.photo-right4 {
+    transition-delay: 0.4s;
+}
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    position: relative;
+
+    margin-top: 150px;
+
+    background-color: #292727;
+
+    color: #f5f0e8;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* 上のアクセントライン */
+
+.footer-line {
+    width: 100%;
+    height: 4px;
+
+    background-color: #c97c86;
+}
+
+
+/* Footer全体 */
+
+.footer-inner {
+    position: relative;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 70px 30px 35px;
+}
+
+
+/* =========================
+   ロゴ
+========================= */
+
+.footer-logo {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    color: #f5f0e8;
+}
+
+
+.footer-subtitle {
+    margin-top: 8px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #d8c8b0;
+}
+
+
+/* =========================
+   Footerリンク
+========================= */
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    margin-top: 35px;
+}
+
+
+.footer-links a {
+    position: relative;
+
+    color: #f5f0e8;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover {
+    color: #c97c86;
+}
+
+
+/* リンクの下線 */
+
+.footer-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background-color: #c97c86;
+
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   コピーライト
+========================= */
+
+.copyright {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #999;
+}
+
+
+
+
+

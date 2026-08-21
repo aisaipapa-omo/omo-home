@@ -1,0 +1,223 @@
+@charset"utf-8";
+
+/* =========================
+   ブログ投稿ページ
+========================= */
+
+.admin-page {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 0 30px;
+}
+
+
+/* =========================
+   タイトル
+========================= */
+
+.admin-page h1 {
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: normal;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   入力項目
+========================= */
+
+.form-item {
+    margin-bottom: 30px;
+}
+
+
+/* ラベル */
+
+.form-item label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   タイトル入力
+========================= */
+
+.form-item input[type="text"] {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #d8cfc3;
+
+    background-color: #fffdf9;
+
+    color: #292727;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+/* =========================
+   本文
+========================= */
+
+.form-item textarea {
+    box-sizing: border-box;
+
+    width: 100%;
+    min-height: 300px;
+
+    padding: 15px;
+
+    resize: vertical;
+
+    border: 1px solid #d8cfc3;
+
+    background-color: #fffdf9;
+
+    color: #292727;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    outline: none;
+}
+
+
+/* 入力中 */
+
+.form-item input[type="text"]:focus,
+.form-item textarea:focus {
+    border-color: #c97c86;
+}
+
+
+/* =========================
+   写真
+========================= */
+
+.form-item input[type="file"] {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #fffdf9;
+
+    border: 1px solid #d8cfc3;
+}
+
+
+/* =========================
+   写真プレビュー
+========================= */
+
+#image-preview {
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+#image-preview img {
+    max-width: 300px;
+    max-height: 300px;
+
+    box-shadow:
+        0 8px 20px rgba(60, 50, 40, 0.15);
+}
+
+
+/* =========================
+   投稿ボタン
+========================= */
+
+#submit-button {
+    display: block;
+
+    width: 200px;
+
+    margin: 40px auto 20px;
+
+    padding: 15px;
+
+    border: none;
+
+    background-color: #292727;
+
+    color: #f5f0e8;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#submit-button:hover {
+    background-color: #c97c86;
+}
+
+
+/* =========================
+   メッセージ
+========================= */
+
+#message {
+    min-height: 25px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   スマホ
+========================= */
+
+@media (max-width: 600px) {
+
+    .admin-page {
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    .admin-page h1 {
+        font-size: 30px;
+    }
+
+    #submit-button {
+        width: 100%;
+    }
+
+}
+

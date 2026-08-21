@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+
+/* =========================
+   記事ページ
+========================= */
+
+.post-page {
+
+    position: relative;
+
+    min-height: 1000px;
+
+    padding:
+        90px 20px 150px;
+
+    box-sizing: border-box;
+
+    background-color:
+        #f7eee2;
+
+}
+
+
+/* =========================
+   背景画像
+========================= */
+
+.post-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("blog-bg.png");
+
+    background-size:
+        100% auto;
+
+    background-position:
+        center top;
+
+    background-repeat:
+        no-repeat;
+
+    opacity:
+        0.45;
+
+    z-index:
+        0;
+
+}
+
+
+/* =========================
+   記事本体
+========================= */
+
+#post {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width:
+        750px;
+
+    margin:
+        0 auto;
+
+    padding:
+        35px;
+
+    box-sizing:
+        border-box;
+
+    background:
+        rgba(
+            255,
+            252,
+            246,
+            0.95
+        );
+
+    border:
+        1px solid
+        rgba(
+            190,
+            170,
+            145,
+            0.5
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            70,
+            50,
+            35,
+            0.12
+        );
+
+}
+
+
+/* =========================
+   日付
+========================= */
+
+.post-date {
+
+    margin:
+        0 0 12px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        12px;
+
+    color:
+        #a97970;
+
+}
+
+
+/* =========================
+   タイトル
+========================= */
+
+.post-title {
+
+    margin:
+        0 0 30px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        32px;
+
+    font-weight:
+        normal;
+
+    line-height:
+        1.5;
+
+    color:
+        #403329;
+
+}
+
+
+/* =========================
+   記事画像
+========================= */
+
+.post-image {
+
+    width:
+        100%;
+
+    max-height:
+        500px;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================
+   本文
+========================= */
+
+.post-content {
+
+    font-size:
+        15px;
+
+    line-height:
+        2;
+
+    color:
+        #5d5148;
+
+    white-space:
+        pre-wrap;
+
+}
+
+
+/* =========================
+   戻る
+========================= */
+
+.back-to-blog {
+
+    display:
+        inline-block;
+
+    margin-top:
+        40px;
+
+    color:
+        #66584d;
+
+    text-decoration:
+        none;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        13px;
+
+    border-bottom:
+        1px solid
+        #b9a99a;
+
+}
+
+
+/* =========================
+   スマホ
+========================= */
+
+@media (max-width: 650px) {
+
+    .post-page {
+
+        padding:
+            55px 12px 100px;
+
+    }
+
+
+    #post {
+
+        padding:
+            22px;
+
+    }
+
+
+    .post-title {
+
+        font-size:
+            24px;
+
+    }
+
+
+    .post-content {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.9;
+
+    }
+
+}

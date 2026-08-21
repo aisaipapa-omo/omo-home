@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ブログ投稿 | OMOん家</title>
+
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 投稿画面専用CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+
+        <div class="logo">
+            <span class="site-name">OMOん家</span>
+            <span class="site-subtitle">ホームページ</span>
+        </div>
+
+        <nav>
+            <a href="index.html">ホーム</a>
+            <a href="blog.html">ブログ</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ブログ投稿画面 -->
+    <main class="admin-page">
+
+        <h1>ブログ投稿</h1>
+
+        <form id="post-form">
+
+            <!-- タイトル -->
+            <div class="form-item">
+
+                <label for="title">タイトル</label>
+
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="タイトルを入力"
+                    required
+                >
+
+            </div>
+
+
+            <!-- 本文 -->
+            <div class="form-item">
+
+                <label for="content">本文</label>
+
+                <textarea
+                    id="content"
+                    name="content"
+                    placeholder="今日のことを書いてみよう..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <!-- 写真 -->
+            <div class="form-item">
+
+                <label for="image">写真</label>
+
+                <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    accept="image/*"
+                >
+
+                <div id="image-preview"></div>
+
+            </div>
+
+
+            <!-- 投稿ボタン -->
+            <button type="submit" id="submit-button">
+                投稿する
+            </button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
+
