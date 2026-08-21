@@ -56,7 +56,7 @@ async function loadPost() {
 
 
             <a
-                href="/home-blog/blog.html"
+                href="/omo-home/home-blog/blog.html"
                 class="back-to-blog"
             >
                 ← ブログ一覧へ戻る
@@ -97,7 +97,7 @@ async function loadPost() {
                 記事を読み込めませんでした。
             </p>
 
-            <a href="/home-blog/blog.html" class="back-to-blog">
+            <a href="/omo-home/home-blog/blog.html" class="back-to-blog">
                 ← ブログ一覧へ戻る
             </a>
         `;
@@ -163,7 +163,7 @@ async function loadPost() {
             ${post.content || ""}
         </div>
 
-        <a href="/home-blog/blog.html" class="back-to-blog">← ブログ一覧へ戻る</a>
+        <a href="/omo-home/home-blog/blog.html" class="back-to-blog">← ブログ一覧へ戻る</a>
     `;
 }
 
