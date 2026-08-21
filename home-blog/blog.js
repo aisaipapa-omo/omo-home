@@ -161,7 +161,7 @@ async function loadPosts() {
         // クリックした記事のIDをURLに入れる
 
         article.href =
-            `post.html?id=${post.id}`;
+            `blog-post/post.html?id=${post.id}`;
 
 
         article.className =

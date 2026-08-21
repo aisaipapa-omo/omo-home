@@ -56,7 +56,7 @@ async function loadPost() {
 
 
             <a
-                href="blog.html"
+                href="/home-blog/blog.html"
                 class="back-to-blog"
             >
                 ← ブログ一覧へ戻る
@@ -76,15 +76,10 @@ async function loadPost() {
         data: post,
         error
     } = await supabaseClient
-
         .from("posts")
-
         .select("*")
-
         .eq("id", postId)
-
         .single();
-
 
     // =========================
     // エラー
@@ -97,21 +92,14 @@ async function loadPost() {
             error
         );
 
-
         postArea.innerHTML = `
-
             <p>
                 記事を読み込めませんでした。
             </p>
 
-
-            <a
-                href="blog.html"
-                class="back-to-blog"
-            >
+            <a href="/home-blog/blog.html" class="back-to-blog">
                 ← ブログ一覧へ戻る
             </a>
-
         `;
 
         return;
@@ -142,59 +130,41 @@ async function loadPost() {
     // =========================
     // 写真
     // =========================
-
     let imageHTML = "";
-
-
     if (post.image_url) {
-
         imageHTML = `
-
             <img
                 src="${post.image_url}"
                 alt="${post.title || ""}"
                 class="post-image"
             >
-
         `;
 
     }
-
 
     // =========================
     // 記事を表示
     // =========================
 
     postArea.innerHTML = `
-
-
         <p class="post-date">
             ${formattedDate}
         </p>
 
-
-        <h1 class="post-title">
+        <h1 class="post-title no-tape">
             ${post.title || ""}
         </h1>
 
-
         ${imageHTML}
 
+        <hr>
 
         <div class="post-content">
             ${post.content || ""}
         </div>
 
-
-        <a
-            href="blog.html"
-            class="back-to-blog"
-        >
-            ← ブログ一覧へ戻る
-        </a>
-
+        <a href="/home-blog/blog.html" class="back-to-blog">← ブログ一覧へ戻る</a>
     `;
-
 }
 
 
